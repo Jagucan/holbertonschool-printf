@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
     
         if (format != NULL)
 		{
-        while (format[a] != NULL)
+        while (format[a] != '\n')
         {
             a++;
             len = *(format + a -1);
