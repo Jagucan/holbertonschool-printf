@@ -19,4 +19,5 @@ int _printf(const char *format, ...)
             
         }
     va_end(elements);
+	return(elements)
 }
