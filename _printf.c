@@ -11,7 +11,7 @@ int _printf(const char *format, ...)
     va_start(elements, format);
     
         
-        while (format[a] != '\0')
+        while (*(format + a - 1))
         {
             a++;
             _putchar(len);
@@ -20,5 +20,5 @@ int _printf(const char *format, ...)
         }
 	_putchar('\n');
     va_end(elements);
-	return(a - 1);
+	return(a);
 }
