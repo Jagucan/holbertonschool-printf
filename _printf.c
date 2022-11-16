@@ -3,22 +3,28 @@
 int _printf(const char *format, ...)
 {
 
-	va_list elements;
-    
-	char len;
-    int a = 0;
+	char *buff;
+	int a = 0;
+	int count = 0;
 
-    va_start(elements, format);
-    
-        
-        while (format[a])
-        {
-            a++;
-            _putchar(len);
-            len = *(format + a - 1);
-            
-        }
+	if(!format)
+		exit(1);
+	
+	buff = malloc((sizeof(char) * count) + 1);
+
+	while (format[a])
+		{
+			if(format[a] != '%')
+			{
+				count++;
+				buff = realoc(buff, count);
+				buff[a] = format[a];
+			}
+
+			else
+				_putchar(); //funcion de manejo//
+				a++;
+		}
 	_putchar('\n');
-    va_end(elements);
-	return(a);
+	return(count);
 }
