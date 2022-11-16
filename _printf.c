@@ -12,14 +12,15 @@ int _printf(const char *format, ...)
     
         if (format != NULL)
 		{
-        while (format[a])
+        while (format[a] != NULL)
         {
             a++;
             len = *(format + a -1);
             _putchar(len);
         }
+		_putchar('\n');
 		}
-	_putchar('\n');
+	
     va_end(elements);
 	return(a);
 }
