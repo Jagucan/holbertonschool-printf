@@ -18,6 +18,7 @@ int _printf(const char *format, ...)
             len = *(format + a -1);
             
         }
+	_putchar('\n');
     va_end(elements);
 	return(a);
 }
