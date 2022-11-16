@@ -5,22 +5,20 @@ int _printf(const char *format, ...)
 
 	va_list elements;
     
-	char len = 0;
+	char len;
     int a = 0;
 
     va_start(elements, format);
     
-        if (format != NULL)
-		{
-        while (format[a] != '\n')
+        
+        while (format[a])
         {
             a++;
-            len = *(format + a -1);
             _putchar(len);
+            len += *(format + a - 1);
+            
         }
-		_putchar('\n');
-		}
-	
+	_putchar('\n');
     va_end(elements);
 	return(a);
 }
