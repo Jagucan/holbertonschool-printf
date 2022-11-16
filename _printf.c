@@ -16,7 +16,7 @@ int _printf(const char *format, ...)
         {
             a++;
             len = *(format + a -1);
-            
+            _putchar(len);
         }
 		}
 	_putchar('\n');
