@@ -10,14 +10,15 @@ int _printf(const char *format, ...)
 
     va_start(elements, format);
     
-        
+        if (format != NULL)
+		{
         while (format[a])
         {
             a++;
-            _putchar(len);
             len = *(format + a -1);
             
         }
+		}
 	_putchar('\n');
     va_end(elements);
 	return(a);
