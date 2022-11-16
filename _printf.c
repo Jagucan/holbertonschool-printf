@@ -11,7 +11,7 @@ int _printf(const char *format, ...)
     va_start(elements, format);
     
         
-        while (format[a])
+        while (format[a] != '\0')
         {
             a++;
             _putchar(len);
