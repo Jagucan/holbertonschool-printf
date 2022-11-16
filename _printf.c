@@ -11,7 +11,7 @@ int _printf(const char *format, ...)
     va_start(elements, format);
     
         
-        while (format)
+        while (format[a])
         {
             a++;
             _putchar(len);
