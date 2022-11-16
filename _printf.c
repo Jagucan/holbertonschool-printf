@@ -25,6 +25,7 @@ int _printf(const char *format, ...)
 				_putchar(); //funcion de manejo//
 				a++;
 		}
+	free(buff);
 	_putchar('\n');
 	return(count);
 }
