@@ -20,5 +20,5 @@ int _printf(const char *format, ...)
         }
 	_putchar('\n');
     va_end(elements);
-	return(len);
+	return(a - 1);
 }
