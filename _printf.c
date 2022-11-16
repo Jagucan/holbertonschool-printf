@@ -5,7 +5,7 @@ int _printf(const char *format, ...)
 
 	va_list elements;
     
-	char len;
+	char len = 0;
     int a = 0;
 
     va_start(elements, format);
