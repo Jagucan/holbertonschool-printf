@@ -3,29 +3,30 @@
 int _printf(const char *format, ...)
 {
 
-	char *buff;
+	char *buffer;
 	int a = 0;
 	int count = 0;
 
 	if(!format)
 		exit(1);
 	
-	buff = malloc((sizeof(char) * count) + 1);
+	buffer = malloc((sizeof(char) * count) + 1);
 
 	while (format[a])
 		{
 			if(format[a] != '%')
 			{
 				count++;
-				buff = realoc(buff, count);
-				buff[a] = format[a];
+				buffer = realloc(buffer, count);
+				buffer[a] = format[a];
 			}
 
 			else
-				_putchar(); //funcion de manejo//
+				_putchar(count); //funcion de manejo//
 				a++;
 		}
-	free(buff);
-	_putchar('\n');
+	
+	write(STDOUT_FILENO, buffer, count);
+	free(buffer);
 	return(count);
 }
