@@ -22,8 +22,10 @@ int _printf(const char *format, ...)
 			}
 
 			else
-				_putchar(count); //funcion de manejo//
+			{
+				_putchar(count); 
 				a++;
+			}
 		}
 	
 	write(STDOUT_FILENO, buffer, count);
