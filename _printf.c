@@ -2,11 +2,14 @@
 
 int _printf(const char *format, ...)
 {
-
+    va_list elements;
+    
 	char *buffer;
 	int a = 0;
 	int count = 0;
-
+	
+    va_start(elements, format);
+    
 	if(!format)
 		exit(1);
 	
@@ -23,12 +26,13 @@ int _printf(const char *format, ...)
 
 			else
 			{
-				_putchar(count); 
-				a++;
+			    
+			    count = get_func_print;
+			    a++;
 			}
 		}
 	
-	write(STDOUT_FILENO, buffer, count);
-	free(buffer);
+	_putchar(count);
 	return(count);
+	va_end(elements);
 }

@@ -11,11 +11,13 @@
 
 typedef struct print
 {
-	char *p;
-	void (*f)(va_list);
+	char *print;
+	void (*f)(va_list elements);
 } print_f;
 
 int _putchar(char c);
 int _printf(const char *format, ...);
+int print_c(va_list elements);
+int get_func_print(char s, va_list element);
 
 #endif
