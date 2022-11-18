@@ -9,18 +9,26 @@ int get_func(const char *format, int *s, va_list ap)
         {0, NULL}
     };
     int i = 0;
+    int a = 0;
 
-    while (prn[i].p != NULL)
+
+    while(prn[i].p)
     {
-        if (format[*s + 1] == '\0')
-            return (1);
-       
-        if (prn[i].p == 0)
+        if (format[*s + 1] == NULL)
+            exit(1);
+            
+        if (prn[i].p == NULL)
         {
-            write(1, format, 1);
-            _putchar(format[*s + 1]);
+            write(1, &format, 1);
+            write(1, &format[*s + 1], 1);
+        }
+        
+        if (prn[i].p == format[*s + 1])
+        {
+            a += prn[i].f(ap);
+            a++;
         }
         i++;
     }
-    return (i);
+    return (a);
 }
