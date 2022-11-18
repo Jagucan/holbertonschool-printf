@@ -12,6 +12,6 @@ int print_c(va_list ap)
 int print_p(va_list ap)
 {
     (void) ap;
-    _putchar('$');
+    _putchar('%');
     return(1);
 }

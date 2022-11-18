@@ -4,20 +4,22 @@
 {
 	va_list ap;
 	
-	char *buffer;
+	int nd = 0;
 	int a = 0, count = 0;
+	
+
 
 	va_start (ap, format);
 
 	if (!format)
 		exit (1);
 	
-	while (format[a])
+	while (format[a] && format)
     	{
 	        if (format[a] != '%')
 	        {
 				write(1, &format[a], 1);
-				count++;
+	            count++;
 	        }
             else
             {
@@ -26,6 +28,7 @@
             }
              a++;
 	    }
-	return (count); 
 	va_end (ap);
+	return (count); 
+	
 }

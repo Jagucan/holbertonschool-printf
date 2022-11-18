@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 int get_func(const char *format, int *s, va_list ap)
 {
     print_f prn[] = {
@@ -27,8 +26,8 @@ int get_func(const char *format, int *s, va_list ap)
         {
             a += prn[i].f(ap);
             a++;
-        }
+        }  
         i++;
     }
-    return (a);
+    return(a);
 }
