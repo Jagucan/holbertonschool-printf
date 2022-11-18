@@ -12,18 +12,17 @@
 	if (!format)
 		exit (1);
 	
-	while (format && format[a])
+	while (format[a])
     	{
 	        if (format[a] != '%')
 	        {
-				count++;
 				write(1, &format[a], 1);
+				count++;
 	        }
             else
             {
-	            count += get_func(format, ap, buffer);
+	            count += get_func(format, ap, a);
 	            a++;
-	           
             }
              a++;
 	    }
