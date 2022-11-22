@@ -4,7 +4,7 @@ int get_func(char s, va_list ap)
 {
 	 print_f prn[] = {
 		{'c', print_c}, 
-//		{'%', print_p},
+
     };
     int a;
 
