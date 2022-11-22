@@ -12,7 +12,7 @@
 
 typedef struct print
 {
-	int *p;
+	int p;
 	int (*f)(va_list);
 } print_f;
 
