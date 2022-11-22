@@ -4,7 +4,7 @@ int _printf(const char *format, ...)
 {
 	va_list ap;
 	
-//	char *buffer;
+
 	int a = 0;
 	int count = 0;
 	
@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 	if (!format)
 		exit(1);
 
-//	buffer = malloc((sizeof(char) * count) + 1);
+
 
 	while (format[a])
 	{
@@ -40,6 +40,6 @@ int _printf(const char *format, ...)
 
 	}
 	return (count);
-//    free(buffer);
+
 	va_end(ap);
 }
