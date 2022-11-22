@@ -1,19 +1,16 @@
 #include "main.h"
-
-int get_func(char s, va_list ap)
+int (*get_print_cases(char *arg))(va_list, char *, int) 
 {
-	 print_f prn[] = {
-		{'c', print_c}, 
-
-    };
-    int a;
-
-	for (a = 0; prn[a].p; a++)
+	int i = 0;
+	cases format[] = {
+		{"c", print_c}, 
+		{"s", print_s},
+	};
+	while (i < 2) 
 	{
-		if (prn[a].p == s)
-           a += prn[a].f(ap);
+	    if (*arg == *(format[i]).print_cases)
+			return ((format[i].cases_print));
+		i++;
 	}
-	return(a);
-	write(1, &s, 1);
-	return (1);
+	return (NULL);
 }

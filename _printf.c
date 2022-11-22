@@ -1,43 +1,42 @@
 #include "main.h"
 
-int _printf(const char *format, ...)
+int _printf(char *format, ...)
 {
 	va_list ap;
-	
-
+	size_t len = 0;
+	char buffer[2000];
 	int a = 0;
-	int count = 0;
+	int (*cases_print)(va_list, char *, int ); 
 	
 	va_start (ap, format);
 	
 	if (!format)
 		exit(1);
 
-
-
 	while (format[a])
 	{
 		if (format[a] != '%')
 		{
-		   count += _putchar(format[a]);
+	        buffer[len] = format[a];
+			len += 1;
 		}
-		
-		else if (format[a + 1] == '%')
-		{
-		    count += _putchar(format[a + 1]);
-		    a++;
-		}
-
 		else
 		{
-		   count += get_func(format[a + 1], ap);
-	       count++;
-	       a++;
+		    cases_print = get_print_cases(&(format[a + 1]));
+		    if (cases_print != NULL)
+		    {
+		        len = cases_print(ap, &buffer[len], len);
+				a++;
+		    }
+		    else
+		    {
+			buffer[len] = format[a];
+                        len += 1;
+		    }
 		}
-	   a++;
-
+	  a++;
 	}
-	return (count);
-
+	write(1, buffer, len);
 	va_end(ap);
+	return (len);
 }

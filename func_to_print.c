@@ -1,16 +1,35 @@
 #include "main.h"
 
-int print_c(va_list ap)
+int print_c(va_list ap, char *buff, int len)
 {
-	int printc;
+	char *c;
 
-	printc = va_arg(ap, int);
-	_putchar(printc);
-	return (1);
+	c = malloc((sizeof(char) + 1));
+	if (c == NULL)
+	    exit(1);
+	c[0] = va_arg(ap, int);
+	if (c[0] == 0)
+		exit (1);
+	len = replace(buff, c, len);
+	free(c);
+	return (len);
 }
 
-/*int print_p(va_list ap)
+int print_s(va_list ap, char *buff, int len)
 {
-    _putchar('%');
-    return(1);
-}*/
+    	char *s;
+	char *a;
+	int len_s;
+
+	a = va_arg(ap, char*);
+	if (a == NULL)
+		    exit(1);
+	len_s = _strlen(a);
+	s = malloc((sizeof(char) * len_s) + 1);
+	if (s == NULL)
+		exit (1);
+	_strcpy(s, a);
+	len = replace(buff, s, len);
+	free(s);
+	return (len);
+}
