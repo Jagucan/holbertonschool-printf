@@ -20,6 +20,14 @@ int _printf(char *format, ...)
 	        buffer[len] = format[a];
 			len += 1;
 		}
+
+		else if (format[a] == '%' && format[a + 1] == '%')
+		{
+		    buffer[len] = format[a + 1];
+			len -= 1;
+			len++;
+		}
+
 		else
 		{
 		    cases_print = get_print_cases(&(format[a + 1]));
