@@ -4,7 +4,7 @@ int _printf(const char *format, ...)
 {
 	va_list ap;
 	
-	char *buffer;
+//	char *buffer;
 	int a = 0;
 	int count = 0;
 	
@@ -13,37 +13,33 @@ int _printf(const char *format, ...)
 	if (!format)
 		exit(1);
 
-   buffer = malloc(5000);
+//	buffer = malloc((sizeof(char) * count) + 1);
 
 	while (format[a])
 	{
 		if (format[a] != '%')
 		{
-	        count++;
-	        count = _putchar(format[a]); /* -> funciona con esto pero sale un porcentaje en todo */
-	        
-	     /*   buffer = realloc(buffer, count);
-	        buffer[a] = format[a]; */
+		   count += _putchar(format[a]);
+	       count++;
+		}
+		
+		else if (format[a + 1] == '%')
+		{
+		    count += _putchar(format[a + 1]);
+		    count++;
+		    a++;
 		}
 
-	    else
-	    {
-		    switch (format[a])
-		    {
-			    case 'c':
-				    count += _putchar(va_arg(ap, int));
-				break;
+		else
+		{
+		   count += get_func(format[a + 1], ap);
+	       count++;
+	       a++;
+		}
+	   a++;
 
-			   /*case '%':
-				    count = ;
-				break;
-				*/
-		    }
-	    }
-	  a++;
 	}
 	return (count);
-	free(buffer);
+//    free(buffer);
 	va_end(ap);
 }
-
