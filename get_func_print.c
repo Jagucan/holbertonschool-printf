@@ -11,10 +11,7 @@ int get_func(char s, va_list ap)
 	for (a = 0; prn[a].p; a++)
 	{
 		if (prn[a].p == s)
-		
            a += prn[a].f(ap);
-          // return(a);
-		
 	}
 	return(a);
 	write(1, &s, 1);
