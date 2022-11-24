@@ -18,7 +18,7 @@ typedef struct cases_all
 
 int _putchar (char c);
 int _printf(const char *format, ...);
-int (*get_print_cases (char *arg)) (va_list, char *, int);
+int (*get_print_cases (char *arg)) (va_list, const char *, int);
 int c_case(va_list ap, char *buff, int len);
 int replace (char *buffer, char *s, int print_len);
 int s_case(va_list ap, char *buff, int len);

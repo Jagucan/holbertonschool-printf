@@ -6,7 +6,7 @@ int _printf(const char *format, ...)
 	char buffer[2000];
 	va_list ap;
 	int a = 0;
-	int (*cases_print)(va_list, char *, int ); 
+	int (*cases_print)(va_list, const char *, int ); 
 
 	va_start (ap, format);
 	
