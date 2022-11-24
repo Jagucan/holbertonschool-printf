@@ -36,7 +36,7 @@ int _printf(char *format, ...)
 			}
 			else
 			{
-				buffer[len] += format[a];
+				buffer[len] = format[a];
 				len++;
 			}
 		}
