@@ -23,6 +23,7 @@ int c_case(va_list ap, char *buff, int len);
 int replace (char *buffer, char *s, int print_len);
 int s_case(va_list ap, char *buff, int len);
 int _strlen(char *s);
+int percent_case(va_list ap, char *buff, int len);
 char *_strcpy(char *dest, char *src);
 
 #endif
