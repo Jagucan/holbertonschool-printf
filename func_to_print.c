@@ -1,6 +1,6 @@
 #include "main.h"
 
-int print_c(va_list ap, char *buff, int len)
+int c_case(va_list ap, char *buff, int len)
 {
 	char *c;
 
@@ -20,7 +20,7 @@ int print_c(va_list ap, char *buff, int len)
 	return (len);
 }
 
-int print_s(va_list ap, char *buff, int len)
+int s_case(va_list ap, char *buff, int len)
 {
 	char *s;
 	char *a;
