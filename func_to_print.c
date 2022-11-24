@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * c_case - Print an Character.
+ * @ap: Is an argument.
+ * @buff: Is the buffer.
+ * @len: Is the length of the string.
+*/
+
 int c_case(va_list ap, char *buff, int len)
 {
 	char *c;
@@ -19,6 +26,13 @@ int c_case(va_list ap, char *buff, int len)
 	free(c);
 	return (len);
 }
+
+/**
+ * c_case - Print an String.
+ * @ap: Is an argument.
+ * @buff: Is the buffer.
+ * @len: Is the length of the string.
+*/
 
 int s_case(va_list ap, char *buff, int len)
 {
@@ -42,6 +56,13 @@ int s_case(va_list ap, char *buff, int len)
 	free(s);
 	return (len);
 }
+
+/**
+ * c_case - Print an Percent.
+ * @ap: Is an argument.
+ * @buff: Is the buffer.
+ * @len: Is the length of the string.
+*/
 
 int percent_case(va_list ap, char *buff, int len)
 {
