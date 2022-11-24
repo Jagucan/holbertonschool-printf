@@ -9,9 +9,11 @@ int _printf(char *format, ...)
 	int (*cases_print)(va_list, char *, int);
 
 	va_start(ap, format);
+
 	if (format == NULL || (format[0] == '%' && format[1] == '\0')
 		|| (format[0] == ' ' && format[1] == '\0'))
 		return (-1);
+
 	while (format[a])
 	{
 		if (format[a] != '%')
