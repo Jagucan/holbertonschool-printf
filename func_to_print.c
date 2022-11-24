@@ -5,7 +5,7 @@
  * @ap: Is an argument.
  * @buff: Is the buffer.
  * @len: Is the length of the string.
- * return: Return the length of the string.
+ * return: Return 1.
 */
 
 int c_case(va_list ap, char *buff, int len)
@@ -33,7 +33,7 @@ int c_case(va_list ap, char *buff, int len)
  * @ap: Is an argument.
  * @buff: Is the buffer.
  * @len: Is the length of the string.
- * return: Return the length of the string.
+ * return: Return 1.
 */
 
 int s_case(va_list ap, char *buff, int len)
@@ -64,7 +64,7 @@ int s_case(va_list ap, char *buff, int len)
  * @ap: Is an argument.
  * @buff: Is the buffer.
  * @len: Is the length of the string.
- * return: Return len.
+ * return: Return 1.
 */
 
 int percent_case(va_list ap, char *buff, int len)
