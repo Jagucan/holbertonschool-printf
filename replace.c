@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * replace - puts s string on pointer buffer
+ * replace - Puts s string on pointer buffer
  * @buffer: Destination buffer
  * @s: String to put
- * @print_len: Final position
+ * @len: Final position
  * Return: Final position
  */
 
