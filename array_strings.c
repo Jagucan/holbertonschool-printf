@@ -18,11 +18,10 @@ int _strlen(char *s)
 }
 
 /**
- * _strncpy - Copies a string.
+ * _strcpy - Copy the string pointer dest to src.
  * @dest: Is a pointer.
- * @src: Is another pointer.
- * @n: Are the number of characters to copy.
- * Return: Return dest.
+ * @src: Is an another pointer.
+ * Return: The value of pointer dest.
  */
 
 char *_strcpy(char *dest, char *src)
