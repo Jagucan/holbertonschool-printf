@@ -3,7 +3,7 @@
 /**
  * _printf - Produces output according to a format.
  * @format: Is a character string.
- * return: Return the number of characters printed.
+ * return: Numbers of char printed.
 */
 int _printf(char *format, ...)
 {
