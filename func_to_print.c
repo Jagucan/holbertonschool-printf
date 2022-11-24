@@ -77,7 +77,7 @@ int percent_case(va_list ap, char *buff, int len)
 		return (1);
 
 	p[0] = va_arg(ap, int);
-	p = '%';
+	p[0] = '%';
 	len = replace(buff, p, len);
 	free(p);
 	return (len);
