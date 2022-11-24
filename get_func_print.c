@@ -1,5 +1,5 @@
 #include "main.h"
-int (*get_print_cases(char *arg))(va_list, const char *, int) 
+int (*get_print_cases(char *arg))(va_list, char *, int) 
 {
 	int i = 0;
 	cases format[] = {

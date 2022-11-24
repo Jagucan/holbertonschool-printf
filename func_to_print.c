@@ -6,11 +6,10 @@ int c_case(va_list ap, char *buff, int len)
 
 	c = malloc((sizeof(char) + 1));
 	if (c == NULL)
-	    return (len);
+	    exit(1);
 	c[0] = va_arg(ap, int);
 	if (c[0] == 0)
-		len += 1;
-	c[1] = '\0';
+		exit (1);
 	len = replace(buff, c, len);
 	free(c);
 	return (len);
@@ -24,11 +23,11 @@ int s_case(va_list ap, char *buff, int len)
 
 	a = va_arg(ap, char*);
 	if (a == NULL)
-		    a = "(null)";
+		    exit(1);
 	len_s = _strlen(a);
 	s = malloc((sizeof(char) * len_s) + 1);
 	if (s == NULL)
-		return (1);
+		exit (1);
 	_strcpy(s, a);
 	len = replace(buff, s, len);
 	free(s);
