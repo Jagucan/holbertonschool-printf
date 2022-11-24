@@ -22,7 +22,7 @@ int c_case(va_list ap, char *buff, int len)
 	if (c[0] == 0)
 		len += 1;
 
-	c[1] = '\0';
+	c[0] = '\0';
 	len = replace(buff, c, len);
 	free(c);
 	return (len);
