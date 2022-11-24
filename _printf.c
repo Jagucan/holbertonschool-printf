@@ -3,13 +3,14 @@
 int _printf(char *format, ...)
 {
 	va_list ap;
+
 	size_t len = 0;
 	char buffer[2000];
 	int a = 0;
-	int (*cases_print)(va_list, char *, int ); 
-	
+	int (*cases_print)(va_list, char *, int);
+
 	va_start (ap, format);
-	
+
 	if (!format)
 		exit(1);
 
@@ -17,30 +18,30 @@ int _printf(char *format, ...)
 	{
 		if (format[a] != '%')
 		{
-	        buffer[len] = format[a];
+			buffer[len] = format[a];
 			len += 1;
 		}
 
 		else if (format[a] == '%' && format[a + 1] == '%')
 		{
-		    buffer[len] = format[a + 1];
+			buffer[len] = format[a + 1];
 			len -= 1;
 			len++;
 		}
 
 		else
 		{
-		    cases_print = get_print_cases(&(format[a + 1]));
-		    if (cases_print != NULL)
-		    {
-		        len = cases_print(ap, &buffer[len], len);
+			cases_print = get_print_cases(&(format[a + 1]));
+			if (cases_print != NULL)
+			{
+				len = cases_print(ap, &buffer[len], len);
 				a++;
-		    }
-		    else
-		    {
+			}
+			else
+			{
 			buffer[len] = format[a];
-                        len += 1;
-		    }
+						len += 1;
+			}
 		}
 	  a++;
 	}
