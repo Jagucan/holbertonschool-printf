@@ -32,7 +32,7 @@ int _printf(char *format, ...)
 			else
 			{
 				buffer[len] = format[a];
-				len += 1;
+				len++;
 			}
 		}
 		a++;
