@@ -85,14 +85,14 @@ int percent_case(va_list ap, char *buff, int len)
 }
 
 /**
- * d_case - Print a decimal.
+ * d_case - Print a numbers.
  * @ap: Is an argument.
  * @buff: Is the buffer.
  * @len: Is the length of the string.
  * Return: The length of the string.
 */
 
-int d_case(va_list ap, char *buff, int len)
+int di_case(va_list ap, char *buff, int len)
 {
 	char *s;
 	char *a;
@@ -119,40 +119,3 @@ int d_case(va_list ap, char *buff, int len)
 	free(a);
 	return (len);
 }
-
-/**
- * i_case - Print a integer.
- * @ap: Is an argument.
- * @buff: Is the buffer.
- * @len: Is the length of the string.
- * Return: The length of the string.
-*/
-/**
-int i_case(va_list ap, char *buff, int len)
-{
-	char *s;
-	char *a;
-	int s_len, num;
-
-	num = va_arg(ap, int);
-
-	a = malloc(sizeof(char) * 35);
-
-	if (a == NULL)
-		return (1);
-
-	a = _itoa(num, a, 2);
-	s_len = _strlen(a);
-
-	s = malloc((sizeof(char) * s_len) + 1);
-
-	if (s == NULL)
-		return (1);
-
-	_strcpy(s, a);
-	len = replace(buff, s, len);
-	free(s);
-	free(a);
-	return (len);
-}
-*/

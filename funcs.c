@@ -58,4 +58,3 @@ void rev_string(char *s)
 		s[a - i - 1] = len;
 	}
 }
-
