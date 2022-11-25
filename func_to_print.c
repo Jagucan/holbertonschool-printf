@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * c_case - Print an Character.
+ * c_case - Print a Character.
  * @ap: Is an argument.
  * @buff: Is the buffer.
  * @len: Is the length of the string.
@@ -29,7 +29,7 @@ int c_case(va_list ap, char *buff, int len)
 }
 
 /**
- * s_case - Print an String.
+ * s_case - Print a String.
  * @ap: Is an argument.
  * @buff: Is the buffer.
  * @len: Is the length of the string.
@@ -48,6 +48,7 @@ int s_case(va_list ap, char *buff, int len)
 		a = "(null)";
 
 	len_s = _strlen(a);
+
 	s = malloc((sizeof(char) * len_s) + 1);
 
 	if (s == NULL)
@@ -60,7 +61,7 @@ int s_case(va_list ap, char *buff, int len)
 }
 
 /**
- * percent_case - Print an Percent.
+ * percent_case - Print a Percent.
  * @ap: Is an argument.
  * @buff: Is the buffer.
  * @len: Is the length of the string.
@@ -80,5 +81,77 @@ int percent_case(va_list ap, char *buff, int len)
 	p[0] = '%';
 	len = replace(buff, p, len);
 	free(p);
+	return (len);
+}
+
+/**
+ * d_case - Print a decimal.
+ * @ap: Is an argument.
+ * @buff: Is the buffer.
+ * @len: Is the length of the string.
+ * Return: The length of the string.
+*/
+
+int d_case(va_list ap, char *buff, int len)
+{
+	char *s;
+	char *a;
+	int s_len, num;
+
+	num = va_arg(ap, int);
+
+	a = malloc(sizeof(char) * 35);
+
+	if (a == NULL)
+		return (1);
+
+	a = _itoa(num, a, 10);
+	s_len = _strlen(a);
+
+	s = malloc((sizeof(char) * s_len) + 1);
+
+	if (s == NULL)
+		return (1);
+
+	_strcpy(s, a);
+	len = replace(buff, s, len);
+	free(s);
+	free(a);
+	return (len);
+}
+
+/**
+ * i_case - Print a integer.
+ * @ap: Is an argument.
+ * @buff: Is the buffer.
+ * @len: Is the length of the string.
+ * Return: The length of the string.
+*/
+
+int i_case(va_list ap, char *buff, int len)
+{
+	char *s;
+	char *a;
+	int s_len, num;
+
+	num = va_arg(ap, int);
+
+	a = malloc(sizeof(char) * 35);
+
+	if (a == NULL)
+		return (1);
+	
+	a = _itoa(num, a, 2);
+	s_len = _strlen(a);
+
+	s = malloc((sizeof(char) * s_len) + 1);
+
+	if (s == NULL)
+		return (1);
+	
+	_strcpy(s, a);
+	len = replace(buff, s, len);
+	free(s);
+	free(a);
 	return (len);
 }

@@ -12,10 +12,12 @@ int (*get_print_cases(char *arg))(va_list, char *, int)
 		{"c", c_case},
 		{"s", s_case},
 		{"%", percent_case},
+		{"d", d_case},
+		{"i", i_case},
 	};
 	int i = 0;
 
-	while (i < 3)
+	while (i < 5)
 	{
 		if (*arg == *(format[i]).print_cases)
 			return ((format[i].cases_print));

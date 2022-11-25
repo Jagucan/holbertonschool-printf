@@ -25,5 +25,9 @@ int s_case(va_list ap, char *buff, int len);
 int _strlen(char *s);
 int percent_case(va_list ap, char *buff, int len);
 char *_strcpy(char *dest, char *src);
+char *_itoa(int num, char *s, unsigned int base);
+int d_case(va_list ap, char *buff, int len);
+void rev_string(char *s);
+int i_case(va_list ap, char *buff, int len);
 
 #endif
