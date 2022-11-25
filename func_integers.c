@@ -10,9 +10,7 @@
 
 char *_itoa(int num, char *s, unsigned int base)
 {
-	int i = 0;
-	int res;
-	int sign = 0;
+	int i = 0, sign = 0, res;
 	unsigned int a;
 
 	if (num == 0)
@@ -27,7 +25,6 @@ char *_itoa(int num, char *s, unsigned int base)
 		sign = 1;
 		a = num * (-1);
 	}
-
 	else
 		a = num;
 
@@ -37,10 +34,8 @@ char *_itoa(int num, char *s, unsigned int base)
 
 		if (res > 9)
 			s[i] = (res - 10) + 'a';
-
 		else
 			s[i] = res + '0';
-
 		a = a / base;
 		i++;
 	}
@@ -50,7 +45,6 @@ char *_itoa(int num, char *s, unsigned int base)
 		s[i] = '-';
 		i++;
 	}
-
 	s[i] = '\0';
 	rev_string(s);
 	return (s);
