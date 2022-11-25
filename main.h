@@ -28,5 +28,6 @@ char *_strcpy(char *dest, char *src);
 char *_itoa(int num, char *s, unsigned int base);
 int di_case(va_list ap, char *buff, int len);
 void rev_string(char *s);
+int o_case(va_list ap, char *buff, int len);
 
 #endif
