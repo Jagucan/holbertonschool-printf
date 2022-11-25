@@ -140,7 +140,7 @@ int i_case(va_list ap, char *buff, int len)
 
 	if (a == NULL)
 		return (1);
-	
+
 	a = _itoa(num, a, 2);
 	s_len = _strlen(a);
 
@@ -148,7 +148,7 @@ int i_case(va_list ap, char *buff, int len)
 
 	if (s == NULL)
 		return (1);
-	
+
 	_strcpy(s, a);
 	len = replace(buff, s, len);
 	free(s);
