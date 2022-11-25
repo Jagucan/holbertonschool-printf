@@ -13,7 +13,7 @@ int (*get_print_cases(char *arg))(va_list, char *, int)
 		{"s", s_case},
 		{"%", percent_case},
 		{"d", d_case},
-		{"i", i_case},
+		{"i", d_case},
 	};
 	int i = 0;
 

@@ -127,7 +127,7 @@ int d_case(va_list ap, char *buff, int len)
  * @len: Is the length of the string.
  * Return: The length of the string.
 */
-
+/**
 int i_case(va_list ap, char *buff, int len)
 {
 	char *s;
@@ -155,3 +155,4 @@ int i_case(va_list ap, char *buff, int len)
 	free(a);
 	return (len);
 }
+*/
