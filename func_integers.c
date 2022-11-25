@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * _itoa - Converts an intiger to string
- * @num: intiger to convert
- * @s: Pointer 
- * @base: Base to convert int
- * Return: Pointer to s
+ * _itoa - Converts an intiger to string.
+ * @num: intiger to convert.
+ * @s: Pointer.
+ * @base: Base to convert int.
+ * Return: Pointer to s.
  */
 
 char *_itoa(int num, char *s, unsigned int base)
