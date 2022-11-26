@@ -48,7 +48,7 @@ int u_case(va_list ap, char *buff, int len)
 
 int o_case(va_list ap, char *buff, int len)
 {
-	char *s;
+	char *n;
 	char *o;
 	int s_len; 
 	unsigned int num;
@@ -63,14 +63,14 @@ int o_case(va_list ap, char *buff, int len)
 	o = _itoa(num, o, 8);
 	s_len = _strlen(o);
 
-	s = malloc((sizeof(char) * s_len) + 1);
+	n = malloc((sizeof(char) * s_len) + 1);
 
-	if (s == NULL)
+	if (n == NULL)
 		return (1);
 
-	_strcpy(s, o);
-	len = replace(buff, s, len);
-	free(s);
+	_strcpy(n, o);
+	len = replace(buff, n, len);
+	free(n);
 	free(o);
 	return (len);
 }
@@ -85,7 +85,7 @@ int o_case(va_list ap, char *buff, int len)
 
 int x_case(va_list ap, char *buff, int len)
 {
-	char *s;
+	char *h;
 	char *x;
 	int s_len; 
 	unsigned int num;
@@ -100,14 +100,14 @@ int x_case(va_list ap, char *buff, int len)
 	x = _itoa(num, x, 16);
 	s_len = _strlen(x);
 
-	s = malloc((sizeof(char) * s_len) + 1);
+	h = malloc((sizeof(char) * s_len) + 1);
 
-	if (s == NULL)
+	if (h == NULL)
 		return (1);
 
-	_strcpy(s, x);
-	len = replace(buff, s, len);
-	free(s);
+	_strcpy(h, x);
+	len = replace(buff, h, len);
+	free(h);
 	free(x);
 	return (len);
 }
