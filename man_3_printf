@@ -1,0 +1,48 @@
+.\" Manpage for _printf.
+
+.TH _printf "1.0" "25 Nov 2022"
+
+.SH NAME
+	Man 3_printf
+
+.SH SYNOPSIS
+	printf FORMAT [ARGUMENT]...
+		Manual of the printf function.
+
+.SH DESCRIPTION
+	_printf reads the typed arguments and produces output 
+	according to the given format.
+
+.SH OPTIONS
+	_printf receives the arguments
+
+		%c For characters.
+		%d, %i For integers or decimals.
+		%x, For Unsigned Hexadecimal.
+		%o For Unsigned octal integers.
+		%u For Unsigned decimal integers.
+		%s For Character string terminated in '\0'.
+		%% For Print the % symbol.
+
+.SH HOW TO USE
+
+	int main()
+	{
+		int n;
+
+		n = "Hello"
+
+		_printf("Hello World.\n");
+		_printf("%s\n", n);
+
+		return(0);
+	}
+
+.SH BUGS
+	There are no known bugs.
+	If you find an error please contact the author
+	for their respective review and correction.
+
+.SH AUTHOR
+	Jacinto Gutierrez Cantillo.
+	Jhoiner Santana Pedroza.
