@@ -49,28 +49,65 @@ int u_case(va_list ap, char *buff, int len)
 int o_case(va_list ap, char *buff, int len)
 {
 	char *s;
-	char *a;
+	char *o;
 	int s_len; 
 	unsigned int num;
 
 	num = va_arg(ap, int);
 
-	a = malloc((sizeof(char) * num) + 1);
+	o = malloc((sizeof(char) * num) + 1);
 
-	if (a == NULL)
+	if (o == NULL)
 		return (1);
 
-	a = _itoa(num, a, 8);
-	s_len = _strlen(a);
+	o = _itoa(num, o, 8);
+	s_len = _strlen(o);
 
 	s = malloc((sizeof(char) * s_len) + 1);
 
 	if (s == NULL)
 		return (1);
 
-	_strcpy(s, a);
+	_strcpy(s, o);
 	len = replace(buff, s, len);
 	free(s);
-	free(a);
+	free(o);
+	return (len);
+}
+
+/**
+ * x_case - Print a unsigned num hexadecimal.
+ * @ap: Is an argument.
+ * @buff: Is the buffer.
+ * @len: Is the length of the string.
+ * Return: The length of the string.
+*/
+
+int x_case(va_list ap, char *buff, int len)
+{
+	char *s;
+	char *x;
+	int s_len; 
+	unsigned int num;
+
+	num = va_arg(ap, int);
+
+	x = malloc((sizeof(char) * num) + 1);
+
+	if (x == NULL)
+		return (1);
+
+	x = _itoa(num, x, 16);
+	s_len = _strlen(x);
+
+	s = malloc((sizeof(char) * s_len) + 1);
+
+	if (s == NULL)
+		return (1);
+
+	_strcpy(s, x);
+	len = replace(buff, s, len);
+	free(s);
+	free(x);
 	return (len);
 }
