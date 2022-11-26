@@ -85,7 +85,7 @@ int percent_case(va_list ap, char *buff, int len)
 }
 
 /**
- * d_case - Print a numbers.
+ * di_case - Print a numbers.
  * @ap: Is an argument.
  * @buff: Is the buffer.
  * @len: Is the length of the string.
