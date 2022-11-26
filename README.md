@@ -25,6 +25,5 @@ int _printf(char *format,...);
 Jhoiner Santana Pedroza.
 Jacinto Gutiérrez Cantillo.
 
-## Diagrams
-
-
+## Diagram
+[_printf diagram](https://drive.google.com/file/d/1s_pDpvZMctHmnwsDfinDTv8gU86xb_FZ/view?usp=share_link)
