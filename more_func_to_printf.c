@@ -26,7 +26,7 @@ int u_case(va_list ap, char *buff, int len)
 	a = _itoa(num, a, len);
 	s_len = _strlen(a);
 
-	s = malloc((sizeof(char) * num) + 1);
+	s = malloc((sizeof(char) * s_len) + 1);
 
 	if (s == NULL)
 		return (1);
