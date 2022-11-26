@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * d_case - Print a unsigned num.
+ * u_case - Print a unsigned num.
  * @ap: Is an argument.
  * @buff: Is the buffer.
  * @len: Is the length of the string.
