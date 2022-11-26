@@ -22,7 +22,7 @@ int u_case(va_list ap, char *buff, int len)
 
 	if (a == NULL)
 		return (1);
-	
+
 	a = _itoa(num, a, len);
 	s_len = _strlen(a);
 
@@ -30,7 +30,7 @@ int u_case(va_list ap, char *buff, int len)
 
 	if (s == NULL)
 		return (1);
-	
+
 	_strcpy(s, a);
 	len = replace(buff, s, len);
 	free(s);
@@ -50,7 +50,7 @@ int o_case(va_list ap, char *buff, int len)
 {
 	char *n;
 	char *o;
-	int s_len; 
+	int s_len;
 	unsigned int num;
 
 	num = va_arg(ap, int);
@@ -87,7 +87,7 @@ int x_case(va_list ap, char *buff, int len)
 {
 	char *h;
 	char *x;
-	int s_len; 
+	int s_len;
 	unsigned int num;
 
 	num = va_arg(ap, int);
